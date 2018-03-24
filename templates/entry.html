@@ -2,14 +2,21 @@
 
 {% block body %}
 
-<h2>{{ the_title }} </h2>
-
+<p> Witaj w programie ,który oblicza kąt miedzy wskazówkami zegara  :D:</p>
+<div class="container">
+  <p>{{ the_title }} </p>
 <form method='POST' action='/results'>
-<table>
-<p> Uzyj tego formularza, aby okreslic parametry wyszukiwania:</p>
-<tr><td>Godzina:</td><td><input name='godzina' ></td></tr>
-<tr><td>Minuty:</td><td><input name='minuta'   ></td></tr>
-</table>
-<p><input value='Zrób to!' type='SUBMIT'></p>
+<div class="row">
+  <div class="col-xs-12 col-lg-12">
+    <b>Godzina: </b><input name='godzina' >
+  </div>
+  <div class="col-xs-12 col-lg-12">
+    <b>Minuty:&nbsp;&nbsp;&nbsp;</b><input name='minuta'   >
+  </div>
+  <div class="col-xs-12 col-lg-12">
+    <input value='Oblicz' type='SUBMIT'>
+  </div>
+</div>
 </form>
+</div>
 {% endblock %}

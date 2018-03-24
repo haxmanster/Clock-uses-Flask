@@ -2,14 +2,32 @@
 
 {% block body %}
 
-<h2>{{the_title}} </h2>
+<div class="container">
 
-<table>
-<tr><td>Godzina:</td><td>{{the_hour}} </td></tr>
-<tr><td>Minuta</td><td>{{the_minute}} </td></tr>
-</table>
-<p>Kat wskazowek zegara bedzie wynosil:</p>
-       <h3>{{the_result}} </h3>
+  <div class="row">
+    <div class="col-xs-12">
+      <h2>{{the_title}} </h2>
+    </div>
+    <div class="col-xs-12 col-lg-12">
+      Godzina: {{the_hour}}
+    </div>
+    <div class="col-xs-12 col-lg-12">
+      Minuta: {{the_minute}}
+    </div>
+    <div class="col-xs-12 col-lg-12">
+       Kat wskazowek zegara bedzie wynosil:
+    </div>
+    <div class="col-xs-12 col-lg-12">
+      <h3>{{the_result}} </h3>
+    </div>
+    <div class="col-xs-12 col-lg-12">
+        <a href="/">wroc</a>
+    </div>
+</div>
 
+
+
+
+</div>
 
 {% endblock %}
