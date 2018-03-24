@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h2>{{ the_title }} </h2>
+
+<form method='POST' action='/results'>
+<table>
+<p> Uzyj tego formularza, aby okreslic parametry wyszukiwania:</p>
+<tr><td>Godzina:</td><td><input name='godzina' ></td></tr>
+<tr><td>Minuty:</td><td><input name='minuta'   ></td></tr>
+</table>
+<p><input value='Zrób to!' type='SUBMIT'></p>
+</form>
+{% endblock %}

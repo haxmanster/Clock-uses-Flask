@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h2>{{the_title}} </h2>
+
+<table>
+<tr><td>Godzina:</td><td>{{the_hour}} </td></tr>
+<tr><td>Minuta</td><td>{{the_minute}} </td></tr>
+</table>
+<p>Kat wskazowek zegara bedzie wynosil:</p>
+       <h3>{{the_result}} </h3>
+
+
+{% endblock %}
