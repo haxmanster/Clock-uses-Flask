@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
- return render_template('entry.html')
+ return render_template('entry.html',the_title="CLOCK ANGLE")
 
 @app.route('/results', methods=['GET','POST'])
 def get_info():
@@ -19,6 +19,7 @@ def get_info():
   def limit():
     if godzina < 25 and minuta < 60:
       return normalizacja_kata()
+    return "Podano zły zakres czasu!"
 
   def normalizacja_kata():
     if suma_katow > 0:
@@ -33,12 +34,10 @@ def get_info():
   def wynik():
     return limit()
 
-
-
-  return render_template('results.html', the_title='Oto wynik',the_minute=minuta,the_hour=godzina,the_result=wynik())
+  return render_template('results.html', the_title='Wynik:',the_minute=minuta,the_hour=godzina,the_result=wynik())
 
 @app.route('/entry')
 def strona_powitalna():
-    return render_template("entry.html", the_title='Witaj na stronie obliczajacej kat wskazowek zegara!')
+    return render_template("entry.html", the_title='CLOCK ANGLE')
 if __name__ == "__main__":
- app.run(host='0.0.0.0',debug=True)
+  app.run(host='0.0.0.0', debug=False)

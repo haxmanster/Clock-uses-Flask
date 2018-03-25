@@ -1,22 +1,32 @@
 {% extends 'base.html' %}
-
 {% block body %}
 
-<p> Witaj w programie ,który oblicza kąt miedzy wskazówkami zegara  :D:</p>
 <div class="container">
-  <p>{{ the_title }} </p>
-<form method='POST' action='/results'>
-<div class="row">
-  <div class="col-xs-12 col-lg-12">
-    <b>Godzina: </b><input name='godzina' >
+  <h3>Witaj w moim programie !!!</h3>
+  <h4>Oblicz kąt między wskazówkami zegara </h4>
+  <div class="middle">
+    <form method="POST" action="/results">
+    <div class="row">
+      <div class="col-xs-12 col-lg-12">
+        <h5>Oblicz kąt wskazówek</h5>
+      </div>
+      <div class="col-xs-12 col-lg-6">
+      <p>Godzina:</p>
+      </div>
+      <div class="col-xs-12 col-lg-6">
+      <p>Minuta:</p>
+      </div>
+    <div class="col-xs-12 col-lg-4">
+      <input class="form-control" name="godzina" placeholder="Godzina">
+    </div>
+    <div class="col-xs-12 col-lg-4">
+      <input class="form-control" name="minuta" placeholder="Minuta">
+    </div>
+      <div class="col-xs-12 col-lg-4">
+          <button class="btn btn-primary" value="Oblicz" type="submit">Oblicz</button>
+      </div>
+   </div>
+     </form>
   </div>
-  <div class="col-xs-12 col-lg-12">
-    <b>Minuty:&nbsp;&nbsp;&nbsp;</b><input name='minuta'   >
-  </div>
-  <div class="col-xs-12 col-lg-12">
-    <input value='Oblicz' type='SUBMIT'>
-  </div>
-</div>
-</form>
 </div>
 {% endblock %}
