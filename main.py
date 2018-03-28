@@ -18,6 +18,8 @@ def get_info():
 
   def limit():
     if godzina < 25 and minuta < 60:
+      if godzina < 0 and minuta < 0:
+        return "nie ma minut i godzin na minusie "
       return normalizacja_kata()
     return "Podano zły zakres czasu!"
 
@@ -30,6 +32,8 @@ def get_info():
       return -suma_katow
     if -suma_katow >= 180:
       return suma_katow +360
+    if -suma_katow >= 360:
+      return (suma_katow +360) * -1
 
   def wynik():
     return limit()
