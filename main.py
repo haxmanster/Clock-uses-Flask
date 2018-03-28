@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request,redirect
+from flask import Flask, render_template, request
 app = Flask(__name__)
 
 
@@ -14,26 +14,35 @@ def get_info():
 
   kat_minuty = stala * minuta
   kat_godziny = (30 * godzina)
-  suma_katow = (kat_minuty - kat_godziny)
+  suma_katow = kat_minuty - kat_godziny
 
   def limit():
-    if godzina < 25 and minuta < 60:
-      if godzina < 0 and minuta < 0:
-        return "nie ma minut i godzin na minusie "
-      return normalizacja_kata()
-    return "Podano zły zakres czasu!"
+    if godzina > 24:
+      return "Nie prawidłowy format czasu. Podaj zakres godzin od 0 do 24 "
+    if minuta > 60:
+      return "Nie prawidłowy format czasu. Podaj zakres minut 0d 0 do 60 "
+    if godzina < 0:
+      return "Nie moża cofnąć sie w czasie !!!"
+    if minuta < 0:
+      return "Nie można cofnąć się w czasie !!! "
+    return powyzej_12()
 
-  def normalizacja_kata():
-    if suma_katow > 0:
-      if suma_katow < 0:
-        return -suma_katow
-      return suma_katow
-    if -suma_katow < 180:
-      return -suma_katow
-    if -suma_katow >= 180:
-      return suma_katow +360
-    if -suma_katow >= 360:
-      return (suma_katow +360) * -1
+  def powyzej_12():
+    if godzina > 12:
+      powyzej = godzina - 12
+      suma_katow = (30 * powyzej) - kat_minuty
+
+      if abs(suma_katow) > 180:
+        return 360 - abs(suma_katow)
+      return abs(suma_katow)
+    return ponizej_24()
+
+  def ponizej_24():
+    if godzina < 13:
+      if abs(suma_katow) > 180:
+        return 360 - abs(suma_katow)
+      return abs(suma_katow)
+    return wynik()
 
   def wynik():
     return limit()
