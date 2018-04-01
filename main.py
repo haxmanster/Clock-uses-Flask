@@ -7,7 +7,9 @@ def index():
  return render_template('entry.html',the_title="CLOCK ANGLE")
 
 @app.route('/results', methods=['GET','POST'])
+
 def get_info():
+
   godzina = float(request.form['godzina'])
   minuta = float(request.form['minuta'])
   stala = float(5.5)
@@ -18,9 +20,9 @@ def get_info():
 
   def limit():
     if godzina > 24:
-      return "Nie prawidłowy format czasu. Podaj zakres godzin od 0 do 24 "
+      return "Nie prawidłowy format czasu. Podaj zakres godzin od 0 do 24"
     if minuta > 60:
-      return "Nie prawidłowy format czasu. Podaj zakres minut 0d 0 do 60 "
+      return "Nie prawidłowy format czasu. Podaj zakres minut 0d 0 do 60"
     if godzina < 0:
       return "Nie moża cofnąć sie w czasie !!!"
     if minuta < 0:
@@ -53,4 +55,4 @@ def get_info():
 def strona_powitalna():
     return render_template("entry.html", the_title='CLOCK ANGLE')
 if __name__ == "__main__":
-  app.run(host='0.0.0.0', debug=False)
+  app.run(host='0.0.0.0', debug=False, port=80)
