@@ -1,0 +1,85 @@
+body {
+    background-image: url("/static/image/cMCk44Y.jpg");
+}
+.container-fluid {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 30px;
+    margin-top: 200px;
+    padding-bottom: 100px;
+    color: #ff9814;
+    background-color: rgba(8, 8, 8, 0.38);
+}
+section h2 {
+    font-size: 20px;
+    margin-left: 40px;
+}
+.container-fluid input {
+    margin-top: 20px;
+}
+.container-fluid button {
+    margin-top: 62px;
+}
+.container-fluid textarea {
+    font-family: Arial;
+    letter-spacing: 5px;
+    height: 20px;
+    text-align: center;
+}
+
+/* @font-face kit by Fonts2u (http://www.fonts2u.com) */
+@font-face {
+    font-family: 'TRON';
+    font-style: normal;
+    font-weight: normal;
+    src: local('TRON'), url('/static/font/TRON.woff') format('woff');
+}
+.intro {
+    padding-top: 20px;
+    margin-left: 10px;
+    height: 100px;
+    width: 100%;
+}
+.form-control {
+    font-family: Arial;
+}
+.btn-default{
+    font-family: Arial;
+}
+button.btn.btn-default:hover{
+    background-color: #ff8b23;
+}
+
+@media screen and (max-width: 400px) {
+    body {
+        background-image: url("/static/image/zegar_3.png");
+    }
+    .intro h1 {
+        font-size: 22px;
+    }
+    label {
+        font-size: 13px;
+    }
+    .container-fluid {
+        padding-top: 15%;
+        margin-top: 100px;
+        background-color: rgba(8, 8, 8, 0.76);
+    }
+    .container-fluid button {
+        margin-top: 38px;
+    }
+    .btn {
+        width: 105px;
+    }
+    button.btn {
+        font-size: 15px;
+    }
+    input.form-control {
+        font-size: 8px;
+    }
+
+}
+@media only screen and (min-width: 401px) and (max-width: 800px) {
+    .intro h1 {
+        font-size: 30px;
+    }
+}

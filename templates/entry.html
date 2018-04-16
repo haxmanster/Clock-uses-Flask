@@ -1,32 +1,23 @@
 {% extends 'base.html' %}
 {% block body %}
 
-<div class="container">
-  <h3>Witaj w moim programie !!!</h3>
-  <h4>Oblicz kąt między wskazówkami zegara </h4>
-  <div class="middle">
-    <form method="POST" action="/results" >
-    <div class="row">
-      <div class="col-xs-12 col-lg-12">
-        <h5>Oblicz kąt wskazówek</h5>
-      </div>
-      <div class="col-xs-12 col-lg-6">
-      <p>Godzina:</p>
-      </div>
-      <div class="col-xs-12 col-lg-6">
-      <p>Minuta:</p>
-      </div>
-    <div class="col-xs-12 col-lg-4">
-      <input class="form-control" name="godzina" placeholder="Godzina" type="number">
-    </div>
-    <div class="col-xs-12 col-lg-4">
-      <input class="form-control" name="minuta" placeholder="Minuta" type="number">
-    </div>
-      <div class="col-xs-12 col-lg-4">
-          <button class="btn btn-primary" value="Oblicz" type="submit">Oblicz</button>
-      </div>
-   </div>
-     </form>
-  </div>
-</div>
+<form method="POST" action="/results">
+        <div class="form-group">
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <label>H O U R :
+                    <input name="godzina" type="number" class="form-control" placeholder="ENTER HOUR">
+                </label>
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <label>M I N U T :
+                    <input name="minuta" type="number" class="form-control" placeholder="ENTER MINUTES">
+                </label>
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <label>
+                    <button type="submit" class="btn btn-default">CALCULATE</button>
+                </label>
+            </div>
+        </div>
+    </form>
 {% endblock %}
