@@ -1,5 +1,6 @@
 body {
-    background-image: url("/static/image/cMCk44Y.jpg");
+    background-image: url("/static/image/cmck44y.png");
+
 }
 .container-fluid {
     font-family: 'Share Tech Mono', monospace;
@@ -9,29 +10,15 @@ body {
     color: #ff9814;
     background-color: rgba(8, 8, 8, 0.38);
 }
-section h2 {
-    font-size: 20px;
-    margin-left: 40px;
-}
-.container-fluid input {
-    margin-top: 20px;
-}
-.container-fluid button {
-    margin-top: 62px;
-}
-.container-fluid textarea {
-    font-family: Arial;
-    letter-spacing: 5px;
-    height: 20px;
-    text-align: center;
-}
 
-/* @font-face kit by Fonts2u (http://www.fonts2u.com) */
-@font-face {
-    font-family: 'TRON';
-    font-style: normal;
-    font-weight: normal;
-    src: local('TRON'), url('/static/font/TRON.woff') format('woff');
+#about_me {
+    font-size: 15px;
+    margin-top: 100px;
+    padding-left: 25px;
+    padding-right: 25px;
+    color: #f5efef;
+    background-color: rgba(8, 8, 8, 0.38);
+    text-align: justify;
 }
 .intro {
     padding-top: 20px;
@@ -42,6 +29,16 @@ section h2 {
 .form-control {
     font-family: Arial;
 }
+.footer {
+  color:#f5efef;
+  font-size: 20px;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+
+}
 .btn-default{
     font-family: Arial;
 }
@@ -49,9 +46,16 @@ button.btn.btn-default:hover{
     background-color: #ff8b23;
 }
 
-@media screen and (max-width: 400px) {
+p {
+  font-size: 1.2em;
+}
+.container-fluid button{
+  margin-top: 30%;
+}
+
+@media screen and (max-width: 800px) {
     body {
-        background-image: url("/static/image/zegar_3.png");
+        background-image: url("/static/image/zegar_2.png");
     }
     .intro h1 {
         font-size: 22px;
@@ -60,12 +64,8 @@ button.btn.btn-default:hover{
         font-size: 13px;
     }
     .container-fluid {
-        padding-top: 15%;
-        margin-top: 100px;
+      padding-bottom: 30px;
         background-color: rgba(8, 8, 8, 0.76);
-    }
-    .container-fluid button {
-        margin-top: 38px;
     }
     .btn {
         width: 105px;
@@ -76,10 +76,19 @@ button.btn.btn-default:hover{
     input.form-control {
         font-size: 8px;
     }
+  .container-fluid button {
+    margin-top: 7%;
+  }
+  .footer {
+    color:#f5efef;
+    font-size: 10px;
+    text-align: center;
+    width: 100%;
+  }
+  #about_me {
+    font-size: 12px;
+    margin-top: 30px;
+    padding-bottom: 40%;
+  }
 
-}
-@media only screen and (min-width: 401px) and (max-width: 800px) {
-    .intro h1 {
-        font-size: 30px;
-    }
 }
