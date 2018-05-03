@@ -30,10 +30,10 @@ def get_info():
     def powyzej_12():
         if godzina > 12:
             powyzej = godzina - 12
-            suma_katow = (30 * powyzej) - kat_minuty
-            if abs(suma_katow) > 180:
-                return 360 - abs(suma_katow)
-            return abs(suma_katow)
+            suma_katow1 = (30 * powyzej) - kat_minuty
+            if abs(suma_katow1) > 180:
+                return 360 - abs(suma_katow1)
+            return abs(suma_katow1)
         return ponizej_24()
 
     def ponizej_24():
