@@ -1,5 +1,5 @@
 ## Clock-uses-Flask
-Program in python create to Calculation of the clockwise angle.
+Program in python created for calculation of the clockwise angle.
 
 ### How to install:
   * [1] Clone repository:  ```git clone https://github.com/haxmanster/Clock-uses-Flask.git ```
